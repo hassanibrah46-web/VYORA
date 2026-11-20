@@ -36,7 +36,7 @@ export default function LoginPage() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000${endpoint}`,
+        `https://vyora-3ecm.onrender.com${endpoint}`,
         {
           method: "POST",
           headers: {
