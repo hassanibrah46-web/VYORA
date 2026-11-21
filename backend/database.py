@@ -12,7 +12,7 @@ database_url = URL.create(
     username=os.getenv("DB_USER"),
     password=os.getenv("DB_PASSWORD"),
     host=os.getenv("DB_HOST"),
-    port=int(os.getenv("DB_PORT")),
+    port=int(os.getenv("DB_PORT", "5432")),
     database=os.getenv("DB_NAME"),
 )
 
@@ -31,3 +31,4 @@ def get_db():
         yield db
     finally:
         db.close()
+s
